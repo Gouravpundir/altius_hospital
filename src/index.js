@@ -31,6 +31,25 @@ mongoose
 
 app.use("/", route);
 
+//vercel
+
+if (process.env.NODE_ENV == "production") {
+  const path = require("path");
+  app.use(express.static(path.join(__dirname, "../client/build")));
+
+  app.get("*", function (_, res) {
+    res.sendFile(
+      path.join(__dirname, "../client/build/index.html"),
+      function (err) {
+        if (err) {
+          res.status(500).send(err);
+        }
+      }
+    );
+  });
+}
+
+
 app.listen(process.env.Port || 4000, function () {
   console.log("Express app is running on port " + (process.env.Port || 4000));
 });
