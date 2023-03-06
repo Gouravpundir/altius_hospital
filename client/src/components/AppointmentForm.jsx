@@ -32,6 +32,7 @@ function AppointmentForm({ onClose, onSubmit }) {
       method: "POST",
       headers: {
         "Content-type": "application/json",
+      'Access-Control-Allow-Origin': 'https://altius-hospital.vercel.app'
       },
       body: JSON.stringify(formData),
     });
