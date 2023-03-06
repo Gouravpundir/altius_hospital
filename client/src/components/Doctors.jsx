@@ -59,6 +59,7 @@ const Doctors = ({ showHeader = true }) => {
           </div>
         </div>
       </div>
+<footer/>
     </div>
   );
 };
