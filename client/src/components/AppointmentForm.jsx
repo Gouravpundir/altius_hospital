@@ -28,7 +28,7 @@ function AppointmentForm({ onClose, onSubmit }) {
       return;
     }
 
-    const response = await fetch("http://localhost:4000/form", {
+    const response = await fetch("https://proud-gold-ring.cyclic.app/form", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
