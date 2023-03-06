@@ -14,6 +14,7 @@ const Home = () => {
       <Specialities showHeader={false} />
       <Doctors showHeader={false} />
       <br />
+        <Footer/>
     </div>
   )
 }
